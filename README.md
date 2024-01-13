@@ -1,2 +1,2 @@
-# xurmo_market
+# mevalar.uz
 Meva va sabzavotlar do'koni
