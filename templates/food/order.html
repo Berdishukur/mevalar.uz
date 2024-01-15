@@ -433,7 +433,7 @@
         function validate() {
 
             inputtxt = document.getElementById("number-id");
-            var phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{2})[-. ]?([0-9]{3})[-. ]?([0-9]{2})[-. ]?([0-9]{2})$/;
+            var phoneno =/^\+998([- ])?(90|91|93|94|95|98|99|33|97|71)([- ])?(\d{3})([- ])?(\d{2})([- ])?(\d{2})$/;
 
             if (inputtxt.value.match(phoneno)) {
 
@@ -458,7 +458,8 @@
                 })
 
             } else {
-                alert("Telefon raqam mavjud emas");
+                alert("Telefon raqam mavjud emas.\n" +
+                    " \t  +998XXyyyyyyy \nshunday formatda kiriting:");
                 document.getElementById('second_div').style.visibility = 'hidden';
                 return false;
             }
