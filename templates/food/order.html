@@ -462,7 +462,11 @@
                     }
                 })
 
-            }
+            } else {
+                alert("Telefon raqam mavjud emas.\n" +
+                    " \t  +998XXyyyyyyy \nshunday formatda kiriting:");
+                document.getElementById('second_div').style.visibility = 'hidden';
+                return false;
             }
 
         }
