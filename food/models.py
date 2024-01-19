@@ -14,6 +14,14 @@ class Product(models.Model):
     price = models.IntegerField(null=False, blank=False)
     image = models.ImageField(upload_to='products')
     created_at = models.DateTimeField(auto_now_add=True)
+    def reduce_stock(self, quantity):
+        if quantity > self.stock:
+            return False
+
+        self.stock -= quantity
+        self.save()
+        return True
+
     def __str__(self):
         return f"{self.title}"
 
