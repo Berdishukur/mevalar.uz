@@ -4,7 +4,6 @@ from django.dispatch import receiver
 from django.conf import settings
 from .models import Order,OrderProduct
 
-
 @receiver(post_save, sender=OrderProduct)
 def notify_admin(sender, instance, created, **kwargs):
     if created:  # Check if a new record is created
