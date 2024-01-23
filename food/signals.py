@@ -10,7 +10,8 @@ def notify_admin(sender, instance, created, **kwargs):
         token = settings.TELEGRAM_BOT_TOKEN
         method = 'sendMessage'
         message_text = f"Client: {instance.order.customer} \n Address: {instance.order.address} \n " \
-                       f" tel:{instance.order.customer.phone_number}\n Mahsulot: {instance.product.title} "
+                       f" tel:{instance.order.customer.phone_number}\n Mahsulot: {instance.product.title} " \
+                       f"\nJami summa: {instance.price*instance.count}"
 
         response = requests.post(
             url=f'https://api.telegram.org/bot{token}/{method}',
