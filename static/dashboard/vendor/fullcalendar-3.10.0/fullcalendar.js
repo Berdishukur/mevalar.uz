@@ -2898,7 +2898,7 @@ exports.rtlDefaults = {
         nextYear: 'left-double-arrow'
     },
     themeButtonIcons: {
-        prev: 'circle-triangle-index.html',
+        prev: 'circle-triangle-e',
         next: 'circle-triangle-w',
         nextYear: 'seek-prev',
         prevYear: 'seek-next'
@@ -9260,7 +9260,7 @@ JqueryUiTheme.prototype.baseIconClass = 'ui-icon';
 JqueryUiTheme.prototype.iconClasses = {
     close: 'ui-icon-closethick',
     prev: 'ui-icon-circle-triangle-w',
-    next: 'ui-icon-circle-triangle-index.html',
+    next: 'ui-icon-circle-triangle-e',
     prevYear: 'ui-icon-seek-prev',
     nextYear: 'ui-icon-seek-next'
 };

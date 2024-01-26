@@ -212,7 +212,7 @@ var Tweenable = (function () {
 
         applyFilter(tweenable, 'beforeTween');
 
-        // If the animation has not yet reached the start point (index.html.g., there was
+        // If the animation has not yet reached the start point (e.g., there was
         // delay that has not yet completed), just interpolate the starting
         // position of the tween.
         if (timeoutHandler_currentTime < (timestamp + delay)) {
@@ -339,7 +339,7 @@ var Tweenable = (function () {
     config = config || {};
     this._configured = true;
 
-    // Attach something to this Tweenable instance (index.html.g.: a DOM element, an
+    // Attach something to this Tweenable instance (e.g.: a DOM element, an
     // object, a string, etc.);
     this._attachment = config.attachment;
 
@@ -2025,7 +2025,7 @@ var Shape = function Shape(container, opts) {
         warnings: false
     }, opts, true);  // Use recursive extend
 
-    // If user specifies index.html.g. svgStyle or text style, the whole object
+    // If user specifies e.g. svgStyle or text style, the whole object
     // should replace the defaults to make working with styles easier
     if (utils.isObject(opts) && opts.svgStyle !== undefined) {
         this._opts.svgStyle = opts.svgStyle;
@@ -2369,8 +2369,8 @@ function extend(destination, source, recursive) {
     return destination;
 }
 
-// Renders index.html with given variables. Variables must be surrounded with
-// braces without any spaces, index.html.g. {variable}
+// Renders templates with given variables. Variables must be surrounded with
+// braces without any spaces, e.g. {variable}
 // All instances of variable placeholders will be replaced with given content
 // Example:
 // render('Hello, {message}!', {message: 'world'})
