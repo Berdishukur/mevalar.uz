@@ -38,7 +38,7 @@ def main_dashboard(request):
         "table_list": table_list,
 
     }
-    return render(request, 'dashboard/index.html',ctx)
+    return render(request, 'index.html',ctx)
 
 def login_page(request):
     if request.POST:
