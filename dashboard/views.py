@@ -26,19 +26,7 @@ def main_dashboard(request):
             }
         )
 
-    ctx = {
-        "counts": {
-            "categories":len(categories),
-            "products": len(products),
-            "customers": len(customers),
-            "orders": len(orders),
 
-        },
-        "categories_products": categories_products,
-        "table_list": table_list,
-
-    }
-    return render(request, 'dashboard/index.html',ctx)
 
 def login_page(request):
     if request.POST:
