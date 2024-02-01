@@ -197,10 +197,3 @@ def customer_order_list(request,id):
     }
     return render(request, "dashboard/customer_order/list.html", ctx)
 
-@login_required_decarator
-def orderproduct_list(request,id):
-    productorders = services.get_product_by_order(id=id)
-    ctx = {
-        'productorders': productorders
-    }
-    return render(request, "dashboard/productorder/list.html", ctx)
