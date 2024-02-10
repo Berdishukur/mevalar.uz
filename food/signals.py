@@ -14,6 +14,5 @@ def notify_admin(sender, instance, created, **kwargs):
                        f"\nSoni:{instance.count}\nJami summa: {instance.price*instance.count}"
 
         response = requests.post(
-            url=f'https://api.telegram.org/bot{token}/{method}',
             data={'chat_id': 5259578459, 'text': message_text}
         ).json()
