@@ -9,6 +9,7 @@ class CustomerForm(forms.ModelForm):
 class OrderForm(forms.ModelForm):
     class Meta:
         model= Order
+        fields="__all__"
 
     def save(self, commit=True, *args, **kwargs):
         model = super().save(commit=False)
