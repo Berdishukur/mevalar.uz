@@ -7,7 +7,6 @@ from .models import Order,OrderProduct
 @receiver(post_save, sender=OrderProduct)
 def notify_admin(sender, instance, created, **kwargs):
     if created:  # Check if a new record is created
-        token = settings.TELEGRAM_BOT_TOKEN
         method = 'sendMessage'
         message_text = f"Client: {instance.order.customer} \n Address: {instance.order.address} \n " \
                        f" tel:{instance.order.customer.phone_number}\n Mahsulot: {instance.product.title} " \
