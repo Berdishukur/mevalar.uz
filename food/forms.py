@@ -13,7 +13,6 @@ class OrderForm(forms.ModelForm):
 
     def save(self, commit=True, *args, **kwargs):
         model = super().save(commit=False)
-        model.customer = kwargs.get("customer", None)
         if commit:
             model.save()
         return model
