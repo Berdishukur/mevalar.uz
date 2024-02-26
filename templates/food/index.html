@@ -251,8 +251,9 @@
             <div class="cost" id="total_price">{{ total_price|intcomma}} <span>UZS</span></div>
         </div>
         <div class="buttons">
-            <button class="clear" onclick="delete_orders()"><a href="{% url 'index' %}"> Rad etish / Очистить</a></button>
             <button class="order" id="order_btn" onclick="order_func()">Buyurtma berish / Заказать</button>
+            <button class="clear" onclick="delete_orders()"><a href="{% url 'index' %}"> Rad etish / Очистить</a></button>
+
         </div>
 
     </div>
