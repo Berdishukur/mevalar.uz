@@ -1,3 +1,9 @@
+mevalar=['olma', 'banan', 'anor', 'nok']
+mevalar_yangi=[]
+for i in mevalar:
+    mevalar_yangi.append(i.title())
+print(mevalar_yangi)
+
 # text=input("So'z kiriting: ")
 # count=0
 # for i in range(0,len(text)):
