@@ -1,8 +1,10 @@
-mevalar=['olma', 'banan', 'anor', 'nok']
-mevalar_yangi=[]
-for i in mevalar:
-    mevalar_yangi.append(i.title())
-print(mevalar_yangi)
+a=int(input('a='))
+b=int(input('b='))
+c=int(input('c='))
+def daraja(a,b,c):
+    katta=max(a,b,c)
+    print(katta)
+daraja(a,b,c)
 
 # text=input("So'z kiriting: ")
 # count=0
