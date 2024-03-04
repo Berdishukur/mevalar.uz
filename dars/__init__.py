@@ -1,3 +1,9 @@
+text=input("So'z kiriting: ")
+count=0
+for i in range(0,len(text)):
+    if text[i]=="a" or text[i]=="A":
+        count+=1
+print(count)
 
 # a=int(input("a="))
 # sonlar=[]
