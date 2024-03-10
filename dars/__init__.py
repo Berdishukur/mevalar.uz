@@ -1,9 +1,22 @@
-def salom_ber(ism):
-    print(f"Assalomu alaykum {ism.title()}")
-ism=input("Ismni kiriting: ")
-salom_ber(ism)
+
+def yosh_hisobla(ism,tugilgan_yil):
+    print(f"{ism.title()} {2024-tugilgan_yil} yoshda")
+
+ism=input("Ism kiriting: ")
+t_yil=int(input("Tug'ilgan yilini kiriting: "))
+yosh_hisobla(ism,t_yil)
 
 
+# def salom_ber(ism):
+#     """
+#     Salom beruvchi funksiya
+#     :param ism:
+#     :return:
+#     """
+#     print(f"Assalomu alaykum {ism.title()}")
+# ism=input("Ismni kiriting: ")
+# salom_ber(ism)
+# print(salom_ber.__doc__)
 # a=int(input('a='))
 # b=int(input('b='))
 # def daraja(a,b):
