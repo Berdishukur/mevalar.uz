@@ -1,10 +1,10 @@
 
-def yosh_hisobla(ism,tugilgan_yil):
-    print(f"{ism.title()} {2024-tugilgan_yil} yoshda")
-
-ism=input("Ism kiriting: ")
-t_yil=int(input("Tug'ilgan yilini kiriting: "))
-yosh_hisobla(ism,t_yil)
+# def yosh_hisobla(ism,tugilgan_yil):
+#     print(f"{ism.title()} {2024-tugilgan_yil} yoshda")
+#
+# ism=input("Ism kiriting: ")
+# t_yil=int(input("Tug'ilgan yilini kiriting: "))
+# yosh_hisobla(ism,t_yil)
 
 
 # def salom_ber(ism):
