@@ -1,10 +1,10 @@
-a=int(input('a='))
-b=int(input('b='))
-c=int(input('c='))
-def daraja(a,b,c):
-    katta=max(a,b,c)
-    print(katta)
-daraja(a,b,c)
+
+
+# a=int(input('a='))
+# b=int(input('b='))
+# def daraja(a,b):
+#     print(str(a)+str(b))
+# daraja(a,b)
 
 # text=input("So'z kiriting: ")
 # count=0
