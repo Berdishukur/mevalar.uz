@@ -1,11 +1,13 @@
 
-def sonni_tekshir(son):
-    if son%2==0:
-        print("juft")
+def katta_top(son1,son2):
+    if son1>son2:
+        print(son1)
+    elif son1==son2:
+        print("Sonlar teng")
     else:
-        print("toq")
-son=int(input("sonno kiritng: "))
-sonni_tekshir(son)
+        print(son2)
+son1=int(input("son kiriting: "))
+son2=int(input("son kiriting: "))
 
 # def yosh_hisobla(ism,tugilgan_yil):
 #     print(f"{ism.title()} {2024-tugilgan_yil} yoshda")
