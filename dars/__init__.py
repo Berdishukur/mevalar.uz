@@ -1,3 +1,7 @@
+def salom_ber(ism):
+    print(f"Assalomu alaykum {ism.title()}")
+ism=input("Ismni kiriting: ")
+salom_ber(ism)
 
 
 # a=int(input('a='))
