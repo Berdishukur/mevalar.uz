@@ -1,12 +1,18 @@
 
+def sonni_tekshir(son):
+    if son%2==0:
+        print("juft")
+    else:
+        print("toq")
+son=int(input("sonno kiritng: "))
+sonni_tekshir(son)
+
 # def yosh_hisobla(ism,tugilgan_yil):
 #     print(f"{ism.title()} {2024-tugilgan_yil} yoshda")
 #
 # ism=input("Ism kiriting: ")
 # t_yil=int(input("Tug'ilgan yilini kiriting: "))
 # yosh_hisobla(ism,t_yil)
-
-
 # def salom_ber(ism):
 #     """
 #     Salom beruvchi funksiya
