@@ -1,17 +1,17 @@
       # 10 - misol
 # digit_count_and_sum(word) - bu funksiya "word"ni i
       # chidagi raqamni aniqlab ularni yig'indisini va nechtaligini print qilsin.
-def digit_count_and_sum(word):
-    count=0
-    for i in range(0,len(word)):
-        if word[i].isnumeric():
-            count+=int(word[i])
-        else:
-            count=count
-    print(count)
-matn=input("so'z kiriting: ")
-
-digit_count_and_sum(matn)
+# def digit_count_and_sum(word):
+#     count=0
+#     for i in range(0,len(word)):
+#         if word[i].isnumeric():
+#             count+=int(word[i])
+#         else:
+#             count=count
+#     print(count)
+# matn=input("so'z kiriting: ")
+#
+# digit_count_and_sum(matn)
 
 #    # 9 - misol
 #work_with_list(a) - bu funksiya a listdan eng kichik sonni topib list
