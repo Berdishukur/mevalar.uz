@@ -1,13 +1,48 @@
+      # 10 - misol
+# digit_count_and_sum(word) - bu funksiya "word"ni i
+      # chidagi raqamni aniqlab ularni yig'indisini va nechtaligini print qilsin.
+def digit_count_and_sum(word):
+    count=0
+    for i in range(0,len(word)):
+        if word[i].isnumeric():
+            count+=int(word[i])
+        else:
+            count=count
+    print(count)
+matn=input("so'z kiriting: ")
 
-def katta_top(son1,son2):
-    if son1>son2:
-        print(son1)
-    elif son1==son2:
-        print("Sonlar teng")
-    else:
-        print(son2)
-son1=int(input("son kiriting: "))
-son2=int(input("son kiriting: "))
+digit_count_and_sum(matn)
+
+#    # 9 - misol
+#work_with_list(a) - bu funksiya a listdan eng kichik sonni topib list
+# elementlariga ko'paytirib qiymatini o'zgartiradi va yangi listni print qilsin.
+# list=[]
+# a=[3,4,5,2,6,8,11]
+# def work_with_list(a):
+#     min_son=a[0]
+#     for son in a:
+#         if son<min_son:
+#             min_son=son
+#     for i in a:
+#         list.append(i*min_son)
+#     print(list)
+# work_with_list(a)
+  # 8-misol
+# def tublarini_top(son1,son2):
+#     tub_list=[]
+#     for son in range(son1,son2+1):
+#         count=0
+#         for i in range(1,son+1):
+#             if son%i==0:
+#                 count+=1
+#         if count==2:
+#             tub_list.append(son)
+#     print(tub_list)
+#
+# son1=int(input("son kiriting: "))
+# son2=int(input("son kiriting: "))
+# tublarini_top(son1,son2)
+#
 
 # def yosh_hisobla(ism,tugilgan_yil):
 #     print(f"{ism.title()} {2024-tugilgan_yil} yoshda")
