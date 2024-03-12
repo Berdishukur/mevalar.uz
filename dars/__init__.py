@@ -1,11 +1,11 @@
-son = int(input("sonni kiriting: "))
-list=[]
-a=1
-while a<=son:
-    list.append(a)
+son = (input("sonni kiriting: "))
+sum=0
+a=0
+while a<len(son):
+    sum+=int(son[a])
     a+=1
 
-print(list)
+print(sum)
 
       # 10 - misol
 # digit_count_and_sum(word) - bu funksiya "word"ni i
