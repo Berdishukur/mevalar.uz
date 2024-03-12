@@ -1,3 +1,12 @@
+son = int(input("sonni kiriting: "))
+list=[]
+a=1
+while a<=son:
+    list.append(a)
+    a+=1
+
+print(list)
+
       # 10 - misol
 # digit_count_and_sum(word) - bu funksiya "word"ni i
       # chidagi raqamni aniqlab ularni yig'indisini va nechtaligini print qilsin.
