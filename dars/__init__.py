@@ -1,11 +1,19 @@
-sonlar=[2,3,4,7,8,13]
-max_son=sonlar[0]
-i=0
-while i<len(sonlar):
-    if sonlar[i]>max_son:
-        max_son=sonlar[i]
-    i+=1
-print(max_son)
+
+
+# number=int(input("Sonni kiriting: "))
+# numbers=[]
+# i=1
+# while i<=number:
+#     count=0
+#     j=1
+#     while j<=i:
+#         if i%j==0:
+#             count+=1
+#         j+=1
+#     if count>2:
+#         numbers.append(i)
+#     i+=1
+# print(numbers)
 
       # 10 - misol
 # digit_count_and_sum(word) - bu funksiya "word"ni i
