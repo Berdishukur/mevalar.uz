@@ -1,4 +1,8 @@
-
+mevalar=["shaftoli", "olma", "nok" ]
+meva_dict={}
+for meva in mevalar:
+    meva_dict[len(meva)]=meva
+print(meva_dict)
 
 # number=int(input("Sonni kiriting: "))
 # numbers=[]
