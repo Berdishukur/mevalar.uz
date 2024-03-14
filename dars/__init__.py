@@ -1,9 +1,24 @@
-davlatlar={'Toshkent':'Uzbekiston','Parij':'Fransiya','Pekin':'Xitoy','Seul':'Koreya','Vashington':'Amerika'}
-davlatlar2=(sorted(davlatlar.values()))
-print(davlatlar2)
+list_1 = ["a", "b", "c"]
+list_2 = [1, 2, 3]
+def merge_list(l1, l2):
+    if len(l1) != len(l2):
+        print("something wrong happen")
+    else:
+        ans = {}
+        for i in range(len(l1)):
+            ans[l1[i]] = l2[i]
+        print(ans, end=" ")
 
+merge_list(list_1, list_2)
 
-
+# davlatlar={'Parij':'Fransiya','Pekin':'Xitoy','Seul':'Koreya','Vashington':'Amerika'}
+# davlat=input("davalt nomini kiriting: ")
+# if davlat in davlatlar.values():
+#     for poytaxt,dav in davlatlar.items():
+#         if dav==davlat:
+#             print(poytaxt)
+# else:
+#     print("Bunday malumot yo'q")
 
 # mahsulotlar = { # Do'kondagi mahsulotlar
 #     'olma':10000,
