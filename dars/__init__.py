@@ -1,18 +1,21 @@
-mahsulotlar = { # Do'kondagi mahsulotlar
-    'olma':10000,
-    'anor':20000,
-    'uzum':40000,
-    'anjir':25000,
-    'shaftoli':30000
-    }
-print(sum(mahsulotlar.values())/len(mahsulotlar))
+davlatlar={'Toshkent':'Uzbekiston','Parij':'Fransiya','Pekin':'Xitoy','Seul':'Koreya','Vashington':'Amerika'}
+davlatlar2=(sorted(davlatlar.values()))
+print(davlatlar2)
+
+
+
+
+# mahsulotlar = { # Do'kondagi mahsulotlar
+#     'olma':10000,
+#     'anor':20000,
+#     'uzum':40000,
+#     'anjir':25000,
+#     'shaftoli':30000
+#     }
+# print(sum(mahsulotlar.values())/len(mahsulotlar))
 # num=mahsulotlar['anor']
 # for meva,narx in mahsulotlar.items():
 #     print(sum())
-
-
-
-
 # hafta_kunlari={1:"dushanba",2:'seshanba',3:'chorshanba',4:'payshanba',5:'juma',6:'shanba',7:'yakshanba'}
 # def kunni_top(son):
 #     for key,value in hafta_kunlari.items():
