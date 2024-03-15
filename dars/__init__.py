@@ -1,8 +1,8 @@
 # LIST COMPREHENSION
-l1=[1,2,3]
-l2=['a','b','c']
-ls=zip(l2,l1)
-print(dict(ls))
+# l1=[1,2,3]
+# l2=['a','b','c']
+# ls=zip(l2,l1)
+# print(dict(ls))
 
 # mevalar=['Olma','anor','gilos','shaftoli','Nok']
 # unlilar=['u',"o'",'i','e','o','a']
