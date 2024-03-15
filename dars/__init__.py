@@ -1,14 +1,45 @@
+# LIST COMPREHENSION
+l1=[1,2,3]
+l2=['a','b','c']
+ls=zip(l2,l1)
+print(dict(ls))
+
+# mevalar=['Olma','anor','gilos','shaftoli','Nok']
+# unlilar=['u',"o'",'i','e','o','a']
+#
+# mevalar2=[i for i in mevalar if i[0].lower() in unlilar ]
+# print(mevalar2)
+# l = []
+# for x in range(2):
+#     for y in range(2):
+#         l.append((x, y))
+# print(l)
+# print([(x,y) for x in range(2) for y in range(2)])
+# mahsulotlar = {
+#     'olma':10000,
+#     'anor':22000,
+#     'uzum':40000,
+#     'anjir':25000,
+#     'shaftoli':30000
+#     }
+# mevalar=[meva for meva,narx in mahsulotlar.items() if narx>=20000 ]
+# print(mevalar)
+#
 
 
-nums=[1,1,1,2,2,4,4,4,4,4,5,7,7,]
-reslut={}
-def counter_dict(nums):
-    for i in nums:
-        reslut[i]=nums.count(i)
-    print(reslut)
-counter_dict(nums)
 
 
+# nums=[1,2,3,4,5,6,7,8,9,12]
+# juftlar=[i**2 for i in nums if i%2==0]
+#
+# print(juftlar)
+# nums=[1,1,1,2,2,4,4,4,4,4,5,7,7,]
+# reslut={}
+# def counter_dict(nums):
+#     for i in nums:
+#         reslut[i]=nums.count(i)
+#     print(reslut)
+# counter_dict(nums)
 
 # list_1 = ["a", "b", "c"]
 # list_2 = [1, 2, 3]
