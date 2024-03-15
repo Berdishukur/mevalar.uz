@@ -1,15 +1,27 @@
-list_1 = ["a", "b", "c"]
-list_2 = [1, 2, 3]
-def merge_list(l1, l2):
-    if len(l1) != len(l2):
-        print("something wrong happen")
-    else:
-        ans = {}
-        for i in range(len(l1)):
-            ans[l1[i]] = l2[i]
-        print(ans, end=" ")
 
-merge_list(list_1, list_2)
+
+nums=[1,1,1,2,2,4,4,4,4,4,5,7,7,]
+reslut={}
+def counter_dict(nums):
+    for i in nums:
+        reslut[i]=nums.count(i)
+    print(reslut)
+counter_dict(nums)
+
+
+
+# list_1 = ["a", "b", "c"]
+# list_2 = [1, 2, 3]
+# def merge_list(l1, l2):
+#     if len(l1) != len(l2):
+#         print("something wrong happen")
+#     else:
+#         ans = {}
+#         for i in range(len(l1)):
+#             ans[l1[i]] = l2[i]
+#         print(ans, end=" ")
+#
+# merge_list(list_1, list_2)
 
 # davlatlar={'Parij':'Fransiya','Pekin':'Xitoy','Seul':'Koreya','Vashington':'Amerika'}
 # davlat=input("davalt nomini kiriting: ")
