@@ -1,3 +1,11 @@
+numbers = [1, 2, 3, 4, 5]
+print(list(map(lambda x: x ** 3, numbers)))
+
+
+# summa = lambda a, b: a+b
+# a=float(input("Sonni kiriting="))
+# b=float(input("Sonni kiriting="))
+# print(summa(a,b))
 # LIST COMPREHENSION
 # l1=[1,2,3]
 # l2=['a','b','c']
