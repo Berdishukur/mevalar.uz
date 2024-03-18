@@ -1,7 +1,23 @@
-numbers = [1, 2, 3, 4, 5]
-print(list(map(lambda x: x ** 3, numbers)))
+ages = [5, 12, 17, 18, 24, 32]
+def myFunc(x):
+  if x < 18:
+    return False
+  else:
+    return True
+
+adults = filter(myFunc, ages)
+print(list(adults))
+# for x in adults:
+#   print(x)
 
 
+# from functools import reduce
+# n =int(input("n="))
+# print(reduce(lambda x, y: x + y, range(1, n + 1)))
+#
+
+# string_it = ["strings", "with", "map"]
+# print(list(map(str.upper, string_it)))
 # summa = lambda a, b: a+b
 # a=float(input("Sonni kiriting="))
 # b=float(input("Sonni kiriting="))
