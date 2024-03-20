@@ -1,3 +1,9 @@
+mahsulotlar = { 'Olma':10000, 'anor':22000, 'uzum':40000, 'Anjir':25000, 'shaftoli':30000 }
+unli=['a','i','o',"o'",'u','e']
+mevalar=[i for i, j in mahsulotlar.items() if i[0].lower() in unli]
+print(mevalar)
+
+
 
 
 
