@@ -1,4 +1,15 @@
+def factorial(x):
+    """This is a recursive function
+    to find the factorial of an integer"""
 
+    if x == 1:
+        return 1
+    else:
+        return (x * factorial(x-1))
+
+
+num =int(input("son= "))
+print(factorial(num))
 
 
 # mahsulotlar = { 'Olma':10000, 'anor':22000, 'uzum':40000, 'Anjir':25000, 'shaftoli':30000 }
