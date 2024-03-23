@@ -1,16 +1,38 @@
-def factorial(x):
-    """This is a recursive function
-    to find the factorial of an integer"""
 
-    if x == 1:
-        return 1
-    else:
-        return (x * factorial(x-1))
+# 2. Kiritilgan belgilardan  parollar generatsiya qiladigan generator yarating.
+#
+#      M: input: abs        output: abs→asb→sab→sba→bas→bsa
 
 
-num =int(input("son= "))
-print(factorial(num))
 
+# def parol_generator(harf):
+#     if len(harf) == 1:
+#         yield harf
+#     else:
+#         for i in range(len(harf)):
+#             for parol in parol_generator(harf[:i] + harf[i+1:]):
+#                 yield harf[i] + parol
+#
+# belgi=input("Belgi= ")
+# par = parol_generator(belgi)
+#
+# parollar=[parol for parol in par]
+# print(parollar)
+
+
+# def factorial(x):
+#     """This is a recursive function
+#     to find the factorial of an integer"""
+#
+#     if x == 1:
+#         return 1
+#     else:
+#         return (x * factorial(x-1))
+#
+#
+# num =int(input("son= "))
+# print(factorial(num))
+#
 
 # mahsulotlar = { 'Olma':10000, 'anor':22000, 'uzum':40000, 'Anjir':25000, 'shaftoli':30000 }
 # unli=['a','i','o',"o'",'u','e']
