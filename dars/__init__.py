@@ -1,9 +1,9 @@
 
+
+
 # 2. Kiritilgan belgilardan  parollar generatsiya qiladigan generator yarating.
 #
 #      M: input: abs        output: abs→asb→sab→sba→bas→bsa
-
-
 
 # def parol_generator(harf):
 #     if len(harf) == 1:
