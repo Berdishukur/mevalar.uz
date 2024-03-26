@@ -1,4 +1,15 @@
 
+#       # 4-listdagi elementlarni n tadan guruhlanganda barcha mavjud
+#        # guruhlarni generatsiya qiladigan generator yarating.
+import itertools
+def comb_gen():
+    m = input("List elementlarini kiriting  ")
+    m_iter=iter(m)
+    result = itertools.combinations(m, 2)
+comb_gen()
+
+
+
 
 
 # 2. Kiritilgan belgilardan  parollar generatsiya qiladigan generator yarating.
