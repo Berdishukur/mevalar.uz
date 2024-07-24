@@ -5,4 +5,3 @@ def str_counter(strs):
     return dict(d)
 
 
-print(str_counter(["shaftoli", "olma", "nok"]))
