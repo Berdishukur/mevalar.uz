@@ -1,3 +1,23 @@
+n=int(input(" N ni kiriting : "))
+sum=0
+i=1
+while i<=n:
+    if i%3==0 and i%9!=0:
+        sum+=i
+    i+=1
+
+print(sum)
+
+# sonlar = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+# sum=0
+# i=0
+# while i<len(sonlar):
+#     sum+=sonlar[i]
+#     i+=1
+# print("Nateja = ",sum)
+
+
+
 
 # i=1
 # while i<=7:
