@@ -26,7 +26,11 @@ def show_menu(update,context):
     )
 def message_func(update,context):
     xabar=update.message.text
-    update.message.reply_text(text=f"Sizning xabaringiz ==>> {xabar}")
+    if xabar=='Send Photo':
+        update.message.reply_photo(photo="https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg")
+    else:
+        update.message.reply_text(text=f"Sizning xabaringiz ==>> {xabar}")
+
 
 def main():
     updater = Updater(token=token)
