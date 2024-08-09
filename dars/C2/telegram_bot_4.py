@@ -11,26 +11,30 @@ def start_func(update, context):
 def show_menu(update,context):
     buttons=[
 
-        [KeyboardButton(text="Send Photo"),
-        KeyboardButton(text="Send Vedio"),
+        [KeyboardButton(text="Send Contact"),
+        KeyboardButton(text="Send Location"),
 
          ],
         [
             KeyboardButton(text='Send Audio'),
-            KeyboardButton(text="Send Contact")
+            KeyboardButton(text="Send Photo")
         ],
     ]
     update.message.reply_text(
         text="Menu",
         reply_markup=ReplyKeyboardMarkup(buttons, resize_keyboard=True, one_time_keyboard=False)
     )
+def message_func(update,context):
+    xabar=update.message.text
+    update.message.reply_text(text=f"Sizning xabaringiz ==>> {xabar}")
 
 def main():
     updater = Updater(token=token)
     dispatcher = updater.dispatcher
     dispatcher.add_handler(CommandHandler('start', start_func))
-
     dispatcher.add_handler(CommandHandler('menu', show_menu))
+    dispatcher.add_handler(MessageHandler(Filters.text,message_func))
+
 
 
     updater.start_polling()
