@@ -1,5 +1,5 @@
-token="7393833956:AAGJvaWDD5l9i-rsWP8BTHOu8pDrZSz_6KY"
-
+token="##"
+ADMIN_ID=0
 from telegram.ext import Updater,CommandHandler,MessageHandler,Filters
 from telegram import ReplyKeyboardMarkup,KeyboardButton
 
@@ -11,7 +11,7 @@ def start_func(update, context):
 def show_menu(update,context):
     buttons=[
 
-        [KeyboardButton(text="Send Contact"),
+        [KeyboardButton(text="Send Contact",request_contact=True),
         KeyboardButton(text="Send Location"),
 
          ],
@@ -28,9 +28,14 @@ def message_func(update,context):
     xabar=update.message.text
     if xabar=='Send Photo':
         update.message.reply_photo(photo="https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg")
+    elif xabar=="Send Audio":
+        update.message.reply_audio(audio="https://muzbass.com/uploads/files/2024-04/Xamdam-Sobirov-Malohat-2_(muzbass_com).mp3")
     else:
         update.message.reply_text(text=f"Sizning xabaringiz ==>> {xabar}")
 
+def contact_func(update,context):
+    phone_number=update.message.contact.phone_number
+    update.message.reply_text(text=f"Sizning nomeringiz ==>>{phone_number}")
 
 def main():
     updater = Updater(token=token)
@@ -38,6 +43,7 @@ def main():
     dispatcher.add_handler(CommandHandler('start', start_func))
     dispatcher.add_handler(CommandHandler('menu', show_menu))
     dispatcher.add_handler(MessageHandler(Filters.text,message_func))
+    dispatcher.add_handler(MessageHandler(Filters.contact,contact_func))
 
 
 
