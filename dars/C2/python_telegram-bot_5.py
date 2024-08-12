@@ -12,7 +12,7 @@ def show_menu(update,context):
     buttons=[
 
         [KeyboardButton(text="Send Contact",request_contact=True),
-        KeyboardButton(text="Send Location"),
+        KeyboardButton(text="Send Location",request_location=True),
 
          ],
         [
@@ -37,6 +37,12 @@ def contact_func(update,context):
     phone_number=update.message.contact.phone_number
     # update.message.reply_text(text=f"Sizning nomeringiz ==>>{phone_number}")
     context.bot.send_message(chat_id=ADMIN_ID,text=f"Yangi foydalanuvchi raqami ===>>>{phone_number}")
+def location_func(update,context):
+    location=update.message.location
+    update.message.reply_text(text="Yangi foydalanuvchi manzili.")
+    # update.message.reply_location(latitude=location.latitude,longitude=location.longitude)
+    context.bot.send_location(chat_id=ADMIN_ID,latitude=location.latitude,longitude=location.longitude)
+
 def main():
     updater = Updater(token=token)
     dispatcher = updater.dispatcher
@@ -44,6 +50,7 @@ def main():
     dispatcher.add_handler(CommandHandler('menu', show_menu))
     dispatcher.add_handler(MessageHandler(Filters.text,message_func))
     dispatcher.add_handler(MessageHandler(Filters.contact,contact_func))
+    dispatcher.add_handler(MessageHandler(Filters.location,location_func))
 
 
 
