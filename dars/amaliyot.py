@@ -1,7 +1,6 @@
-sonlar=[1,2,3,6,22,6,3,8,3,9,3]
-son=int(input("Sonni kiriting : "))
-a=sonlar.count(son)
-print(a)
+sonlar = [3, 1, 4, 1, 5, 9, 2]
+son=int(input("Sonni kiriting :"))
+print(sonlar.index(son))
 
 # import random
 # x=random.randint(1,100)
