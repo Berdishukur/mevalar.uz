@@ -13,12 +13,16 @@ while True:
         print("Sizning joningiz nolga teng bo'ldi \n     Xayr salomat bo'ling.")
         break
     elif tanlov>=2*x:
+        jon-=1
         print("Juda baland")
     elif x<tanlov<2*x:
+        jon+=1
         print("Ozgina balandroq")
     elif tanlov<=int(x/2):
+        jon-=1
         print("Juda past")
     elif int(x/2)<tanlov < x:
+        jon+=1
         print("Ozgina pastroq")
     else:
         print("Tanlovingiz xato")
