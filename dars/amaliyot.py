@@ -1,6 +1,5 @@
 sonlar = [3, 1, 4, 1, 5, 9, 2]
 son=int(input("Sonni kiriting :"))
-print(sonlar.index(son))
 
 # import random
 # x=random.randint(1,100)
