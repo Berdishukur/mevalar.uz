@@ -2,7 +2,7 @@ token="7393833956:AAGJvaWDD5l9i-rsWP8BTHOu8pDrZSz_6KY"
 ADMIN_ID=6317196964
 from telegram.ext import Updater,CommandHandler,MessageHandler,Filters
 from telegram import ReplyKeyboardMarkup,KeyboardButton
-
+from geo_name import geo_location_name
 
 def start_func(update, context):
     update.message.reply_text(text="Salom xush kelibsiz!!!")
@@ -40,9 +40,9 @@ def contact_func(update,context):
 def location_func(update,context):
     location=update.message.location
     update.message.reply_text(text="Yangi foydalanuvchi manzili.")
-    # update.message.reply_location(latitude=location.latitude,longitude=location.longitude)
-    context.bot.send_location(chat_id=ADMIN_ID,latitude=location.latitude,longitude=location.longitude)
-    print(location.latitude,location.longitude)
+    address=geo_location_name(location.latitude,location.longitude)
+    list_address=address.split(",")
+    update.message.reply_text(text=f"Shahar : {list_address[0]}")
 
 def main():
     updater = Updater(token=token)

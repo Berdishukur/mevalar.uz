@@ -1,3 +1,37 @@
+yosh=int(input("Yoshingizni kiriting : "))
+if yosh>=60:
+    print("Siz pensiya yoshidasiz.")
+elif 18<yosh<60:
+    print("Siz ishlaydigan yoshdasiz")
+elif 7<=yosh<=18:
+    print("Siz maktab yoshidasiz")
+elif 2<yosh<7:
+    print("Siz bog'cha yoshidasiz")
+else:
+    print("Siz ona qaramog'idasiz")
+
+
+# if yosh>=60:
+#     print("Siz pensiya olishingiz mumukun")
+# else:
+#     print("Sizning yoshingiz yetmadi")
+
+
+# son=int(input("Sonni kiriting : "))
+#
+# if son%2==0:
+#     print(son+2)
+# else:
+#     print(son-2)
+
+
+
+
+
+
+
+
+
 
 
 

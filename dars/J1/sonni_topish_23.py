@@ -3,6 +3,7 @@ x=random.randint(1,100)
 count=0
 jon=8
 while True:
+    print(F"Sizda {jon} ta jon bor . ")
     jon-=1
     tanlov=int(input("Tanlavingizni kiriting : "))
     count+=1

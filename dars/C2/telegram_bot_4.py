@@ -1,5 +1,5 @@
-token="##"
-ADMIN_ID=0
+token="7393833956:AAGJvaWDD5l9i-rsWP8BTHOu8pDrZSz_6KY"
+ADMIN_ID=6317196964
 from telegram.ext import Updater,CommandHandler,MessageHandler,Filters
 from telegram import ReplyKeyboardMarkup,KeyboardButton
 
