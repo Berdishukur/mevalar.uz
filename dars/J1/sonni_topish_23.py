@@ -27,5 +27,7 @@ while True:
         print("Ozgina pastroq")
     else:
         print("Tanlovingiz xato")
+    if  count%5==0:
+        jon-=2
 
 
