@@ -1,11 +1,15 @@
 import logging
 from telegram import ReplyKeyboardMarkup, KeyboardButton
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, ConversationHandler
-from geo_name import geo_location_name
+import sqlite3
+from geo_name import get_location_name
+
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 
-users=[]
-user={}
+conn = sqlite3.connect("users.db")
+c = conn.cursor()
+
+users={}
 
 def start(update, context):
     reply_text = 'Salom! telefon raqamingizni kiriting:'
@@ -17,11 +21,10 @@ def start(update, context):
 
     return 'PHONE_NUMBER'
 
+
 def phone_number(update, context):
     phone_number = update.message.contact.phone_number
     context.user_data['phone_number'] = phone_number
-
-    user["phone_number"] = phone_number
     update.message.reply_text('Rahmat! Ismingiz nima?')
     return 'FIRST_NAME'
 
@@ -29,17 +32,67 @@ def phone_number(update, context):
 def first_name(update, context):
     first_name = update.message.text
     context.user_data['first_name'] = first_name
+    update.message.reply_text('Rahmat! Familyangiz nima?')
+    return 'LAST_NAME'
 
-    # user['first_name'] = first_name
-    # update.message.reply_text('Rahmat! Familyangiz nima?')
-    # users.append(user)
-    # print(users)
+
+def last_name(update, context):
+    last_name = update.message.text
+    context.user_data['last_name'] = last_name
+    update.message.reply_text('Rahmat! yoshingiz?')
+    return 'AGE'
+
+
+def age(update, context):
+    age = update.message.text
+    context.user_data['age'] = age
+    update.message.reply_text('Rahmat! Jinsingiz: erkak/ayol?')
+    return 'GENDER'
+
+
+def gender(update, context):
+    gender = update.message.text
+    context.user_data['gender'] = gender
+    reply_markup = ReplyKeyboardMarkup([
+        [KeyboardButton(text="lokatsiyanngizni ulashing", request_location=True)]
+    ], resize_keyboard=True, one_time_keyboard=True)
+    context.bot.send_message(chat_id=update.effective_user.id, text="lokatsiyanngizni ulashing:", reply_markup=reply_markup)
+    return 'GEOLOCATION'
+
+
+def geolocation(update, context):
+    latitude = update.message.location.latitude
+    longitude = update.message.location.longitude
+    address = get_location_name(latitude, longitude)
+    context.user_data['latitude'] = latitude
+    context.user_data['longitude'] = longitude
+    context.user_data['address'] = address
+    users["Phone_nuber"]=context.user_data['phone_number']
+    users["First_name"]=context.user_data['first_name']
+    users["last_name"]=context.user_data['last_name']
+    users['Age']=context.user_data['age']
+    users["Gender"]=context.user_data['gender']
+    users["Address"]=context.user_data['address']
+    users["Latitude"]=context.user_data['latitude']
+    users["Longitude"]=context.user_data['longitude'],
+    print(users)
     logging.info("User Registered")
+    update.message.reply_text("Ro'yxatdan o'tganingiz uchun Rahmat!")
+    update.message.reply_text(f"""
+        phone: {context.user_data['phone_number']},
+        first_name: {context.user_data['first_name']},
+        last_name: {context.user_data['last_name']},
+        age: {context.user_data['age']},
+        gender: {context.user_data['gender']},
+        address: {context.user_data['address']},
+        """)
     return ConversationHandler.END
+
 
 def cancel(update, context):
     update.message.reply_text(text='Bekor qilindi!')
     return ConversationHandler.END
+
 
 def main():
     updater = Updater(token="7393833956:AAGJvaWDD5l9i-rsWP8BTHOu8pDrZSz_6KY")
@@ -51,6 +104,10 @@ def main():
         states={
             'PHONE_NUMBER': [MessageHandler(Filters.contact & ~Filters.command, phone_number)],
             'FIRST_NAME': [MessageHandler(Filters.text & ~Filters.command, first_name)],
+            'LAST_NAME': [MessageHandler(Filters.text & ~Filters.command, last_name)],
+            'AGE': [MessageHandler(Filters.text & ~Filters.command, age)],
+            'GENDER': [MessageHandler(Filters.text & ~Filters.command, gender)],
+            'GEOLOCATION': [MessageHandler(Filters.location & ~Filters.command, geolocation)],
 
         },
         fallbacks=[CommandHandler('cancel', cancel)]
