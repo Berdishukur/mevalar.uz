@@ -27,8 +27,19 @@ while True:
     if g[0]=="X" and g[1]=="X" and g[2]=="X" or g[3]=="X" and g[4]=="X" and g[5]=="X" or g[6]=="X" and g[7]=="X" and g[8]=="X" or g[0]=="X" and g[3]=="X" and g[6]=="X" or g[1]=="X" and g[4]=="X" and g[7] =="X" or g[2]=="X" and g[5]=="X" and g[8]=="X" or g[0]=="X" and g[4]=="X" and g[8]=="X" or g[2]=="X" and g[4]=="X" and g[6]=="X" :
         print("X yudti. Xayr!!")
         break
-
-
+    o=int(input("O = "))
+    while g[o-1]=="X" or g[o-1]==0:
+        print("Bu katak band qaytadan kiriting: ")
+        o = int(input("O = "))
+    g[o-1]=0
+    print(f"""
+                    {g[0]} | {g[1]} | {g[2]} 
+                   -----------
+                    {g[3]} | {g[4]} | {g[5]}
+                   -----------
+                    {g[6]} | {g[7]} | {g[8]} 
+       """
+          )
 
 
 

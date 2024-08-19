@@ -62,14 +62,57 @@
 #     print("Musbat emas")
 
 # 17. A soni berilgan. Uni juft va 2 xonalik son ekanligni aniqlang.
+#
+# A=int(input(" A = "))
+#
+# if A%2==0 and 9<A<100:
+#     print(True)
+# else:
+#     print(False)
+g = [1, 2, 3, 4, 5, 6, 7, 8, 9, ]
 
-A=int(input(" A = "))
+print(f"""
+             {g[0]} | {g[1]} | {g[2]}
+             ----------
+             {g[3]} | {g[4]} | {g[5]}
+             ----------
+             {g[6]} | {g[7]} | {g[8]}
 
-if A%2==0 and 9<A<100:
-    print(True)
-else:
-    print(False)
+""")
+while True:
+    x = int(input("x = "))
+    while g[x - 1] == "x" or g[x - 1] == 0:
+        print("Bu katak bant boshqasini kiriting !")
+        x = int(input("X = "))
+    g[x - 1] = "x"
+    print(f"""                                       
+             {g[0]} | {g[1]} | {g[2]}
+             ----------
+             {g[3]} | {g[4]} | {g[5]}
+             ----------
+             {g[6]} | {g[7]} | {g[8]}
+""")
+    if g[0] == "x" and g[1] == "x" and g[2] == "x" or g[3] == "x" and g[4] == "x" and g[5] == "x" or g[6] == "x" and g[7] == "x" and g[8] == "x" or g[0] == "x" and g[4] == "x" and g[8] == "x" or g[0] == "x" and g[
+        3] == "x" and g[6] == "x" or g[1] == "x" and g[4] == "x" and g[7] == "x" or g[2] == "x" and g[5] == "x" and g[8] == "x" or g[2] == "x" and g[4] == "x" and g[6] == "x":
+        print("x yutdi : xayir")
+        break
+    o = int(input("o = "))
+    while g[o - 1] == "o" or g[o - 1] == 0:
+        print("Bu katak bant boshqasini kiriting !")
+        o = int(input("o = "))
+    g[o - 1] = "o"
+    print(f"""                                       
+             {g[0]} | {g[1]} | {g[2]}
+             ----------
+             {g[3]} | {g[4]} | {g[5]}
+             ----------
+             {g[6]} | {g[7]} | {g[8]}
+""")
 
+    if g[0] == "o" and g[1] == "o" and g[2] == "o" or g[3] == "o" and g[4] == "o" and g[5] == "o" or g[6] == "o" and g[7] == "o" and g[8] == "o" or g[0] == "o" and g[4] == "o" and g[8] == "o" or g[0] == "o" and g[
+        3] == "o" and g[6] == "o" or g[1] == "o" and g[4] == "o" and g[7] == "o" or g[2] == "o" and g[5] == "o" and g[8] == "o" or g[2] == "o" and g[4] == "o" and g[6] == "o":
+        print("0 yutdi : xayir")
+        break
 
 
 
