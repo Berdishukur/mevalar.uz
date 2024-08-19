@@ -1,13 +1,9 @@
 import logging
 from telegram import ReplyKeyboardMarkup, KeyboardButton
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, ConversationHandler
-import sqlite3
-from geo_name import get_location_name
 
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 
-conn = sqlite3.connect("users.db")
-c = conn.cursor()
 
 users={}
 
@@ -63,10 +59,8 @@ def gender(update, context):
 def geolocation(update, context):
     latitude = update.message.location.latitude
     longitude = update.message.location.longitude
-    address = get_location_name(latitude, longitude)
     context.user_data['latitude'] = latitude
     context.user_data['longitude'] = longitude
-    context.user_data['address'] = address
     users["Phone_nuber"]=context.user_data['phone_number']
     users["First_name"]=context.user_data['first_name']
     users["last_name"]=context.user_data['last_name']

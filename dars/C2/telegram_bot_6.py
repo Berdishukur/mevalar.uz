@@ -1,5 +1,5 @@
-token="7393833956:AAGJvaWDD5l9i-rsWP8BTHOu8pDrZSz_6KY"
-ADMIN_ID=6317196964
+token="#"
+ADMIN_ID=0
 from telegram.ext import Updater,CommandHandler,MessageHandler,Filters
 from telegram import ReplyKeyboardMarkup,KeyboardButton
 from geo_name import geo_location_name
@@ -41,8 +41,15 @@ def location_func(update,context):
     location=update.message.location
     update.message.reply_text(text="Yangi foydalanuvchi manzili.")
     address=geo_location_name(location.latitude,location.longitude)
+    print(address)
     list_address=address.split(",")
-    update.message.reply_text(text=f"Shahar : {list_address[0]}")
+    update.message.reply_text(text=f"""Davlat : {list_address[-1]}
+    Pochta raqam : {list_address[-2]}
+    Viloyat : {list_address[-3]}
+    Tuman : {list_address[-4]}
+    Shahar/Qishliq : {list_address[-5]}
+    
+    """)
 
 def main():
     updater = Updater(token=token)
