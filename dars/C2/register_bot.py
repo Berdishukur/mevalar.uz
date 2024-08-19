@@ -66,7 +66,6 @@ def geolocation(update, context):
     users["last_name"]=context.user_data['last_name']
     users['Age']=context.user_data['age']
     users["Gender"]=context.user_data['gender']
-    users["Address"]=context.user_data['address']
     users["Latitude"]=context.user_data['latitude']
     users["Longitude"]=context.user_data['longitude'],
     print(users)
@@ -78,7 +77,6 @@ def geolocation(update, context):
         last_name: {context.user_data['last_name']},
         age: {context.user_data['age']},
         gender: {context.user_data['gender']},
-        address: {context.user_data['address']},
         """)
     return ConversationHandler.END
 
