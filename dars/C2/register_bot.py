@@ -21,6 +21,7 @@ def start(update, context):
 def phone_number(update, context):
     phone_number = update.message.contact.phone_number
     context.user_data['phone_number'] = phone_number
+    print(context.user_data["phone_number"])
     update.message.reply_text('Rahmat! Ismingiz nima?')
     return 'FIRST_NAME'
 
@@ -42,7 +43,13 @@ def last_name(update, context):
 def age(update, context):
     age = update.message.text
     context.user_data['age'] = age
-    update.message.reply_text('Rahmat! Jinsingiz: erkak/ayol?')
+    reply_markup = ReplyKeyboardMarkup([
+        [KeyboardButton(text="erkak")],[KeyboardButton(text="ayol")]
+    ], resize_keyboard=True, one_time_keyboard=True)
+    context.bot.send_message(chat_id=update.effective_user.id,
+                             text="Jinsingizni tanlang:",
+                             reply_markup=reply_markup)
+
     return 'GENDER'
 
 
