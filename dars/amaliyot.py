@@ -1,12 +1,34 @@
-fuqoralik=input("Milatingizni kiriting  ")
-yosh=int(input(" YOshingizni kiriting : "))
 
-if "uzb" in fuqoralik and yosh>=18:
-    print("sizda saylash huquqi bor")
-else:
-    print("sizda saylash huquqi yo'q")
+class Texnika:
+    def __init__(self, Brand, Model, type):
+        self.Brand = Brand
+        self.Model = Model
+        self.type = type
+
+    def info(self):
+        print(f" Brand  : {self.Brand} \nModel  : {self.Model}  \ntype  : {self.type}")
 
 
+Texnika1 = Texnika("Acer", "A2", "10 - avlod")
+Texnika1.info()
+
+
+#   "Notebooks" child klassi bor. Unda konstruktirida qo'shimcha (video_card, ram, display).
+#     more_info() - (brand, model, type, video_card, ram, display) ni print qilib beradi.
+
+
+class Notebooks(Texnika):
+    def __init__(self, video_card, ram, display):
+        self.video_card = video_card
+        self.ram = ram
+        self.display = display
+
+    def more_info(self):
+        print(f" video_card  : {self.video_card} \nram  : {self.ram}  \ndisplay  : {self.display}")
+
+
+Notebooks1 = Notebooks("STP - 4", "16 GB", "24 IPS HD ")
+Notebooks1.more_info()
 
 
 
