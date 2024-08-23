@@ -1,10 +1,11 @@
+
 import logging
 from telegram import ReplyKeyboardMarkup, KeyboardButton
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, ConversationHandler
 
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 
-
+ADMIN_ID= 0
 users={}
 
 def start(update, context):
@@ -77,14 +78,17 @@ def geolocation(update, context):
     users["Longitude"]=context.user_data['longitude'],
     print(users)
     logging.info("User Registered")
-    update.message.reply_text("Ro'yxatdan o'tganingiz uchun Rahmat!")
-    update.message.reply_text(f"""
-        phone: {context.user_data['phone_number']},
-        first_name: {context.user_data['first_name']},
-        last_name: {context.user_data['last_name']},
-        age: {context.user_data['age']},
-        gender: {context.user_data['gender']},
-        """)
+    update.message.reply_text(f"Rahmat, {users['First_name'] }\n    to'liq ro'yxatdan o'tdingiz !!!")
+    context.bot.send_message(chat_id=ADMIN_ID,text=F"""
+    Telfon : {users["Phone_nuber"]}
+    Ism : {users['First_name']}
+    Familiya : {users['last_name']}
+    Yosh : {users['Age']}
+    Jinsi : {users["Gender"]}
+    
+    
+    
+    """)
     return ConversationHandler.END
 
 
@@ -94,7 +98,7 @@ def cancel(update, context):
 
 
 def main():
-    updater = Updater(token="7393833956:AAGJvaWDD5l9i-rsWP8BTHOu8pDrZSz_6KY")
+    updater = Updater(token="#")
     dispatcher = updater.dispatcher
 
     conv_handler = ConversationHandler(
