@@ -5,7 +5,6 @@ jinsi=True #bool
 
 
 
-# ism="Ali"
 # print(ism)
 
 
