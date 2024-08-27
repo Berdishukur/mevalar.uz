@@ -22,6 +22,9 @@ if "kitob" in qiziqish or "kutubxona" in qiziqish:
 
 elif "sport" in qiziqish:
     pass
+else:
+    print("Sizdagi qiziqishlar haqida bizda malumot yo'q")
+
 
 
 
