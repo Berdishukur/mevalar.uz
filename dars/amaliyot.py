@@ -1,3 +1,14 @@
+"""
+foydalanuvchidan qiziqishlari so'ralsin.
+
+Agar kitob yoki kutubxona qiziqishlari orasida bo'lsa, qanday kitoblar yoqishi so'ralsin.
+    agar detektiv so'zini ishlatsa, shaytanat kitobi haqidagi fikri so'ralsin.
+    agar diniy kitoblarga qiziqsa "Hadis va Hayot" kitoblar to'plamini sovg'a qilamiz deyilsin.
+
+Agar sport so'zi qiziqishlari orasida bo'lsa, qaysi sport turiga qiziqishi so'ralsin,
+   agar futbol sport turlari orasida bo'lsa, qaysi komandani yoqtirishi so'ralsin.
+        agar real yoki barsa komandasini yozsa, el-classicoga chipta sovg'a qilamiz deyilsin
+"""
 
 qiziqish=input("Nimga qiziqasiz ? ")
 
