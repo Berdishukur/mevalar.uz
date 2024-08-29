@@ -1,30 +1,57 @@
-"""
-foydalanuvchidan qiziqishlari so'ralsin.
-
-Agar kitob yoki kutubxona qiziqishlari orasida bo'lsa, qanday kitoblar yoqishi so'ralsin.
-    agar detektiv so'zini ishlatsa, shaytanat kitobi haqidagi fikri so'ralsin.
-    agar diniy kitoblarga qiziqsa "Hadis va Hayot" kitoblar to'plamini sovg'a qilamiz deyilsin.
-
-Agar sport so'zi qiziqishlari orasida bo'lsa, qaysi sport turiga qiziqishi so'ralsin,
-   agar futbol sport turlari orasida bo'lsa, qaysi komandani yoqtirishi so'ralsin.
-        agar real yoki barsa komandasini yozsa, el-classicoga chipta sovg'a qilamiz deyilsin
-"""
-
-qiziqish=input("Nimga qiziqasiz ? ")
-
-if "kitob" in qiziqish or "kutubxona" in qiziqish:
-    kitob=input("Qanday kitoblarga qiziqasiz ? ")
-    if "detektiv" in kitob:
-        fikir=input("Shaytanat kitobi haqida fikringiz qanday ? ")
-    elif "diniy" in kitob:
-        print("Hadis va Hayot kitoblari sizga sovg'a")
+# """
+def fibinachi(n):
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return fibinachi(n - 1) + fibinachi(n - 2)
 
 
-elif "sport" in qiziqish:
-    pass
-else:
-    print("Sizdagi qiziqishlar haqida bizda malumot yo'q")
+print(fibinachi())
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# foydalanuvchidan qiziqishlari so'ralsin.
+#
+# Agar kitob yoki kutubxona qiziqishlari orasida bo'lsa, qanday kitoblar yoqishi so'ralsin.
+#     agar detektiv so'zini ishlatsa, shaytanat kitobi haqidagi fikri so'ralsin.
+#     agar diniy kitoblarga qiziqsa "Hadis va Hayot" kitoblar to'plamini sovg'a qilamiz deyilsin.
+#
+# Agar sport so'zi qiziqishlari orasida bo'lsa, qaysi sport turiga qiziqishi so'ralsin,
+#    agar futbol sport turlari orasida bo'lsa, qaysi komandani yoqtirishi so'ralsin.
+#         agar real yoki barsa komandasini yozsa, el-classicoga chipta sovg'a qilamiz deyilsin
+# """
+#
+# qiziqish=input("Nimga qiziqasiz ? ")
+#
+# if "kitob" in qiziqish or "kutubxona" in qiziqish:
+#     kitob=input("Qanday kitoblarga qiziqasiz ? ")
+#     if "detektiv" in kitob:
+#         fikir=input("Shaytanat kitobi haqida fikringiz qanday ? ")
+#     elif "diniy" in kitob:
+#         print("Hadis va Hayot kitoblari sizga sovg'a")
+
+
+# elif "sport" in qiziqish:
+#     pass
+# else:
+#     print("Sizdagi qiziqishlar haqida bizda malumot yo'q")
+#
 
 
 
