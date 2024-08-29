@@ -10,7 +10,6 @@ Agar sport so'zi qiziqishlari orasida bo'lsa, qaysi sport turiga qiziqishi so'ra
         agar real yoki barsa komandasini yozsa, el-classicoga chipta sovg'a qilamiz deyilsin
 """
 
-qiziqish=input("Nimga qiziqasiz ? ")
 
 if "kitob" in qiziqish or "kutubxona" in qiziqish:
     kitob=input("Qanday kitoblarga qiziqasiz ? ")
