@@ -6,7 +6,6 @@
 
 
 
-print("Salom")
 
 
 
