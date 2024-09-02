@@ -7,8 +7,35 @@
 
 
 
-print()
 
+
+
+
+
+
+
+
+
+
+import json
+
+with open("test.json", 'r') as f:
+    json_to_python = json.load(f)
+
+for savol in json_to_python:
+    print(savol["question"])
+    javoblar = savol['answers']
+
+    variantlar = ['A', 'B', 'C', 'D']
+    for i, javob in enumerate(javoblar):
+        print(f"{variantlar[i]}) {javob['answers']}")
+
+    tanlov = input((f"A){javoblar[0]}\nB){javoblar[1]}\nC{javoblar[2]}\nD){javoblar[3]}\n   >>>>> "))
+    tanlangan_javob = javoblar[variantlar.index(tanlov.upper())]
+    if tanlov == "A" and javoblar[0][" isTrue"] == True:
+        print("Sizning javobingiz to'g'ri")
+    else:
+        print("Siz xato javob qaytardingiz")
 
 
 
