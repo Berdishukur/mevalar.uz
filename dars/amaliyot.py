@@ -1,3 +1,16 @@
+a=float(input("A = "))
+print(a%1)
+
+
+
+# suz=input("So'z kiriting : ")
+# son=int(input("Sonni kiriting : "))
+# yangi_suz=""
+# for i in range(len(suz)):
+#     if i==son:
+#         continue
+#     yangi_suz+=suz[i]
+# print(yangi_suz)
 # if 2>3:
 #     pass
 # else:
