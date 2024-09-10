@@ -1,11 +1,11 @@
 
 def ayir(a,b):
-    print("Ayirma = ",a-b)
+    return a-b
 
 x=int(input("birinchi sonni kiriting : "))
 y=int(input("Ikkinchi sonni kiriting : "))
-ayir(x,y)
 
+print(ayir(x,y))
 
 
 # matn=input("Matn = ")
