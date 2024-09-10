@@ -1,13 +1,21 @@
-import datetime
-y=datetime.date.year
-m=datetime.date.month
-d=datetime.date.day
-# def get_time(y,m,d):
-#     return  datetime.datetime.fromtimestamp(datetime.datetime(y,m,d))
+
+def ayir(a,b):
+    print("Ayirma = ",a-b)
+
+x=int(input("birinchi sonni kiriting : "))
+y=int(input("Ikkinchi sonni kiriting : "))
+ayir(x,y)
 
 
 
-
+# matn=input("Matn = ")
+#
+# def uzunlig(txt):
+#     sum=0
+#     for i in txt:
+#         sum+=1
+#     print(sum)
+# uzunlig(matn)
 
 
 
