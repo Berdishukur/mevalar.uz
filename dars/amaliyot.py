@@ -2,10 +2,34 @@ import datetime
 y=datetime.date.year
 m=datetime.date.month
 d=datetime.date.day
-def get_time(y,m,d):
-    return  datetime.datetime.fromtimestamp(datetime.datetime(y,m,d))
+# def get_time(y,m,d):
+#     return  datetime.datetime.fromtimestamp(datetime.datetime(y,m,d))
 
-print(get_time(2024,2,2))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ # print(get_time(2024,2,2))
 
 
 # suz=input("So'z kiriting : ")
