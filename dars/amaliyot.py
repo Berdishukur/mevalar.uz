@@ -1,11 +1,32 @@
-n=int(input("N sonni kiriting : "))
-def juft_toq_tekshir(n):
-    if n % 2 == 0:
-        print("Juft")
-    else:
-        print("Toq")
+ism=input("Ismongizni kiriting : ")
+familiya=input("familiyangizni kiriting : ")
+yosh=int(input("Yoshingizni kiriting : "))
+def user_data(first_name,last_name,age):
+    print(F"Ism : {first_name}\nFamiliya : {last_name}\nYosh : {age}")
+user_data(ism,familiya,yosh)
 
-juft_toq_tekshir(n)
+
+
+
+# n=int(input("N sonni kiriting : "))
+# def musbat_manfiy_tekshir(N):
+#     if N>0:
+#         print("Musbat")
+#     elif N<0:
+#         print("Manfiy")
+#     else:
+#         print("Nol")
+# musbat_manfiy_tekshir(n)
+
+
+
+# def juft_toq_tekshir(n):
+#     if n % 2 == 0:
+#         print("Juft")
+#     else:
+#         print("Toq")
+#
+# juft_toq_tekshir(n)
 
 
 
