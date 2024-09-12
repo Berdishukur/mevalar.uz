@@ -1,11 +1,26 @@
+n=int(input("N sonni kiriting : "))
+def juft_toq_tekshir(n):
+    if n % 2 == 0:
+        print("Juft")
+    else:
+        print("Toq")
 
-def ayir(a,b):
-    return a-b
+juft_toq_tekshir(n)
 
-x=int(input("birinchi sonni kiriting : "))
-y=int(input("Ikkinchi sonni kiriting : "))
 
-print(ayir(x,y))
+
+
+
+
+
+
+# def ayir(a,b):
+#     return a-b
+#
+# x=int(input("birinchi sonni kiriting : "))
+# y=int(input("Ikkinchi sonni kiriting : "))
+#
+# print(ayir(x,y))
 
 
 # matn=input("Matn = ")
