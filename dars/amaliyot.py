@@ -1,9 +1,17 @@
-ism=input("Ismongizni kiriting : ")
-familiya=input("familiyangizni kiriting : ")
-yosh=int(input("Yoshingizni kiriting : "))
-def user_data(first_name,last_name,age):
-    print(F"Ism : {first_name}\nFamiliya : {last_name}\nYosh : {age}")
-user_data(ism,familiya,yosh)
+n=int(input("N sonini kiriting : "))
+i=2
+while i<=n:
+    print(i)
+    i+=2
+
+
+
+# ism=input("Ismongizni kiriting : ")
+# familiya=input("familiyangizni kiriting : ")
+# yosh=int(input("Yoshingizni kiriting : "))
+# def user_data(first_name,last_name,age):
+#     print(F"Ism : {first_name}\nFamiliya : {last_name}\nYosh : {age}")
+# user_data(ism,familiya,yosh)
 
 
 
