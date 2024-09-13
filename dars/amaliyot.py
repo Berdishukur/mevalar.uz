@@ -1,10 +1,32 @@
-n=int(input("N sonini kiriting : "))
-i=2
-while i<=n:
-    print(i)
-    i+=2
 
 
+# while True:
+#     son=int(input("Dasturdan foydalanishni xohlaysizmi?\n Yes ===>>1 \n No ====>>0\n ....."))
+#     if son==1:
+#         print("Salom !!! ")
+#     elif son ==0:
+#         print("Xayr salomat bo'ling !!")
+#         break
+#     else:
+#         print("Tanlovingiz xato .")
+
+
+
+
+
+
+
+
+
+# n=int(input("N sonini kiriting : "))
+# i=1
+# sum=0
+# while i<=n:
+#
+#     if i%5==0:
+#         break
+#     print(i)
+#     i+=1
 
 # ism=input("Ismongizni kiriting : ")
 # familiya=input("familiyangizni kiriting : ")
