@@ -1,7 +1,7 @@
-i=1
-while i<6:
-    print(str(i)*i)
-    i+=1
+# i=1
+# while i<6:
+#     print(str(i)*i)
+#     i+=1
 
 
 # while True:
