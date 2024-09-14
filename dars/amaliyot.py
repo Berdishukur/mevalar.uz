@@ -1,8 +1,36 @@
-# i=1
-# while i<6:
-#     print(str(i)*i)
-#     i+=1
+a = int(input("a: "))
+b = int(input("b: "))
+c = int(input("c: "))
 
+
+def find_max(a, b, c):
+    if a > b > c
+        print(f"Eng katta son {a}")
+        print(f"Eng katta son {b}")
+        print(f"Eng katta son {c}")
+
+elif a > c > b:
+print(f"Eng katta son {a}")
+print(f"Eng katta son {c}")
+print(f"Eng katta son {b}")
+elif b > a > c:
+print(f"Eng katta son {b}")
+print(f"Eng katta son {a}")
+print(f"Eng katta son {c}")
+elif b > c > a:
+print(f"Eng katta son {b}")
+print(f"Eng katta son {c}")
+print(f"Eng katta son {a}")
+elif c > a > b:
+print(f"Eng katta son {c}")
+print(f"Eng katta son {a}")
+print(f"Eng katta son {b}")
+elif c > b > a:
+print(f"Eng katta son {c}")
+print(f"Eng katta son {b}")
+print(f"Eng katta son {a}")
+
+find_max(a, b, c)
 
 # while True:
 #     son=int(input("Dasturdan foydalanishni xohlaysizmi?\n Yes ===>>1 \n No ====>>0\n ....."))
