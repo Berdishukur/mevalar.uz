@@ -35,7 +35,7 @@ def message_func(update,context):
 
 def contact_func(update,context):
     phone_number=update.message.contact.phone_number
-    # update.message.reply_text(text=f"Sizning nomeringiz ==>>{phone_number}")
+    update.message.reply_text(text=f"Sizning nomeringiz ==>>{phone_number}")
     context.bot.send_message(chat_id=ADMIN_ID,text=f"Yangi foydalanuvchi raqami ===>>>{phone_number}")
 def location_func(update,context):
     location=update.message.location
