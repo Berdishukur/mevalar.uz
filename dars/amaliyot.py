@@ -1,38 +1,125 @@
-a = int(input("a: "))
-b = int(input("b: "))
-c = int(input("c: "))
+def work_with_list(a) :
+    a.sort()
+    kichik=a[0]
+    new_list=[]
+    for i in a:
+        new_list.append(i*kichik)
+    print(new_list)
+myList=[3,8,11,88,67,222,64,92]
+work_with_list(myList)
 
 
-def find_max(a, b, c):
-    if a > b > c
-        print(f"Eng katta son {a}")
-        print(f"Eng katta son {b}")
-        print(f"Eng katta son {c}")
 
-elif a > c > b:
-print(f"Eng katta son {a}")
-print(f"Eng katta son {c}")
-print(f"Eng katta son {b}")
-elif b > a > c:
-print(f"Eng katta son {b}")
-print(f"Eng katta son {a}")
-print(f"Eng katta son {c}")
-elif b > c > a:
-print(f"Eng katta son {b}")
-print(f"Eng katta son {c}")
-print(f"Eng katta son {a}")
-elif c > a > b:
-print(f"Eng katta son {c}")
-print(f"Eng katta son {a}")
-print(f"Eng katta son {b}")
-elif c > b > a:
-print(f"Eng katta son {c}")
-print(f"Eng katta son {b}")
-print(f"Eng katta son {a}")
+# def add_right(a, b):
+#     print(a+b)
+# a=input(" A = ")
+# b=input(" B = ")
+# add_right(a,b)
 
-find_max(a, b, c)
+# def digit_count_and_sum(word):
+#     count=0
+#     for i in word:
+#         if i.isdigit():
+#             count+=1
+#     print(F" {count} ta raqam mavjud ekan.")
+#
+# matn=input("matnni kiriting : ")
+# digit_count_and_sum(matn)
 
-# while True:
+
+
+
+
+# def daraja4(a, b, c, d):
+#     print(a**d)
+#     print(b**d)
+#     print(c**d)
+# a=int(input(" A = "))
+# b=int(input(" B = "))
+# c=int(input(" C = "))
+# d=int(input(" D = "))
+# daraja4(a,b,c,d)
+
+
+
+
+
+
+
+
+
+# myList=[1,2,3,4,5,6,7,8,9]
+# def list_sum(myList):
+#     sum=0
+#     for i in myList:
+#         sum+=i
+#     print("nateja = ",sum)
+#
+# list_sum(myList)
+
+# def find_letter_count(word,letter):
+#     count=0
+#     for i in word:
+#         if i.lower()==letter.lower():
+#             count+=1
+#     print("nateja = ",count)
+#
+# matn=input("So'zni kiriting : ")
+# harif=input("Harifni kiriting : ")
+# find_letter_count(matn,harif)
+
+
+
+# def find_max(a,b,c):
+#     print("Eng katta son= ",max(a,b,c))
+#
+# a=int(input(" A = "))
+# b=int(input(" B = "))
+# c=int(input(" C = "))
+# find_max(a,b,c)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# def digit_count_and_sum(word):
+#     sum=0
+#     for i in word:
+#         if i.isdigit():
+#             sum+=int(i)
+#     print("raqamlari Yigindisi = ",sum)
+# matn=input("Ixtiyoriy matnni kiriting : ")
+# digit_count_and_sum(matn)
+#
+# # while True:
 #     son=int(input("Dasturdan foydalanishni xohlaysizmi?\n Yes ===>>1 \n No ====>>0\n ....."))
 #     if son==1:
 #         print("Salom !!! ")
