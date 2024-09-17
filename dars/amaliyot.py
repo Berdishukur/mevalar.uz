@@ -1,13 +1,82 @@
-def work_with_list(a) :
-    a.sort()
-    kichik=a[0]
-    new_list=[]
-    for i in a:
-        new_list.append(i*kichik)
-    print(new_list)
-myList=[3,8,11,88,67,222,64,92]
-work_with_list(myList)
+import  random
 
+find_number=random.randint(1,100)
+jon=100
+while True:
+    taxminiy_son=int(input("Sonni kiriting : "))
+    if taxminiy_son==find_number:
+        print("Siz yutdingiz !!!")
+        break
+    elif taxminiy_son*2<=find_number:
+        print("Juda past")
+    elif taxminiy_son < find_number:
+        print("Ozgina past")
+    elif taxminiy_son>2*find_number:
+        print("Juda baland")
+    elif taxminiy_son>find_number:
+        print("Ozgina baland")
+    jon-=10
+    print(f"Sizda {jon} ta jon qoldi")
+    if jon==0:
+        print("Siz yutqazdingiz .")
+        break
+
+
+
+
+
+
+
+
+#
+# while True:
+#     son1=int(input("Birinchi sonni kiriting : "))
+#     amal=input("Amalni kiriting : ")
+#     amallar=["-","+","/","*"]
+#     while amal not  in amallar:
+#         amal=input("Sizning amalingiz xato , qaytadan kiriting : ")
+#     son2 = int(input("Ikkinchi sonni kiriting : "))
+#     if amal=="+":
+#         print("yig'indi = ",son1+son2)
+#     elif amal=="-":
+#         print("Ayirma = ",son1-son2)
+#     elif amal=="*":
+#         print("Ko'paytma = ",son1*son2)
+#     elif amal=="/":
+#         print("Bo'linma = ",son1/son2)
+#     tanlov=int(input(" Yana amal bajarasizmi? \n     1 ==>> YES \n     0 ==>> NO ...."))
+#     if tanlov ==0:
+#         print("Xayr  salomat bo'ling : ")
+#         break
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# def work_with_list(a) :
+#     a.sort()
+#     kichik=a[0]
+#     new_list=[]
+#     for i in a:
+#         new_list.append(i*kichik)
+#     print(new_list)
+# myList=[3,8,11,88,67,222,64,92]
+# work_with_list(myList)
+#
 
 
 # def add_right(a, b):
