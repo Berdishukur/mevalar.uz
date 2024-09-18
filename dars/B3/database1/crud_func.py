@@ -10,7 +10,7 @@ def get_employee(database_path,employee_id):
         cursor.execute("SELECT * FROM employees WHERE employee_id=?",(employee_id,))
         return cursor.fetchone()
 emp=get_employee(database_path,101)
-print(emp)
+print(list(emp))
 
 
 
