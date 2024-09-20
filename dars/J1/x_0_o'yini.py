@@ -18,18 +18,18 @@ while True:
     g[o-1]="🐢"
     jadval()
     if g[0]==g[1]==g[2]=="🐢" or g[3]==g[4]== g[5]=="🐢" or g[6]==g[7]==g[8]=="🐢" or g[0]==g[3]==g[6]=="🐢" or g[1]== g[4]== g[7] =="🐢" or g[2]== g[5]== g[8] =="🐢" or g[0]== g[4]== g[8]=="🐢" or g[2]== g[4]== g[6]=="🐢":
-        print('0 yutdi! tamom')
+        print('🐢 yutdi! tamom')
         break
 
 
-    x=int(input("X = "))
+    x=int(input("🐍 = "))
     while g[x-1]=='🐢' or g[x-1]=="🐍":
         print("Bu katak band qaytadan kiriting: ")
-        x = int(input("X = "))
+        x = int(input("🐍 = "))
     g[x - 1] = "🐍"
     jadval()
     if g[0]==g[1]==g[2]=="🐍" or g[3]==g[4]== g[5]=="🐍" or g[6]==g[7]==g[8]=="🐍" or g[0]==g[3]==g[6]=="🐍" or g[1]== g[4]== g[7] =="🐍" or g[2]== g[5]== g[8] =="🐍" or g[0]== g[4]== g[8]=="🐍" or g[2]== g[4]== g[6]=="🐍" :
-        print("X yudti. Xayr!!")
+        print("🐍 yudti. Xayr!!")
         break
 
 
