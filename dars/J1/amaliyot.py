@@ -1,11 +1,8 @@
-def user_date(first_name,last_name,age):
-    print(f"""
-    Ism : {first_name}
-    Familiya : {last_name}
-    Yosh : {age}
-    """)
-ism=input("Ismingizni kiiriting : ")
-familiya=input("Familiyangizni kiriting : ")
-yosh=int(input("Yoshingizni kiriting : "))
-user_date(ism,familiya,yosh)
 
+def listSum(myList):
+    sum=0
+    for i in myList:
+        sum+=i
+    print("nateja = ",sum)
+mySonlar=[1,2,3,4,5,6,7,8,9,10]
+listSum(mySonlar)
