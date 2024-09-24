@@ -1,10 +1,11 @@
-class MyClass6:
-    words=[]
-    def add_word(self,word):
-        self.words.append(word)
-        print(self.words)
-    def remove(self,word):
-        self.words.remove(word)
-        print(self.words)
-MyClass6.add_word(MyClass6,"Olma")
-MyClass6.remove(MyClass6,"Olma")
+def user_date(first_name,last_name,age):
+    print(f"""
+    Ism : {first_name}
+    Familiya : {last_name}
+    Yosh : {age}
+    """)
+ism=input("Ismingizni kiiriting : ")
+familiya=input("Familiyangizni kiriting : ")
+yosh=int(input("Yoshingizni kiriting : "))
+user_date(ism,familiya,yosh)
+
