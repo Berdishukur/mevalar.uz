@@ -1,12 +1,18 @@
 class Student:
-    def __init__(self,name,age,gender):
+    holat='uyqichi'
+    def __init__(self,name="Anna",age=22,gender="Ayol"):
         self.name=name
         self.age=age
         self.gender=gender
         print("Work init")
 
 talaba1=Student("Ali",25,"Erkak")
-print(talaba1.name)
+talaba2=Student(name="Aziz",gender="Erkak")
+# print(talaba2.age)
+print(talaba1.holat)
+print(talaba2.holat)
+Student.holat="Kitobxon"
+print(talaba1.holat)
 
 
 
