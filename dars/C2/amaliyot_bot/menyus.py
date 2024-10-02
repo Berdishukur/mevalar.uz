@@ -27,12 +27,13 @@ def show_menu(update,context):
 def message_func(update,context):
     xabar=update.message.text
     if xabar=='Send Photo':
-        update.message.reply_photo(photo=open('112.png','r'))
-        chat_id = update.effective_chat.id
-        # Rasimni joylashgan manzilini bu yerga kiriting, masalan:
-        photo_path = 'path/to/your/image.jpg'
-        # Rasimni yuborish
-        context.bot.send_photo(chat_id=chat_id, photo=open(photo_path, 'rb'))
+        # update.message.reply_photo(photo=open('112.png','r'))
+        # chat_id = update.effective_chat.id
+        # # Rasimni joylashgan manzilini bu yerga kiriting, masalan:
+        # photo_path = 'path/to/your/image.jpg'
+        # # Rasimni yuborish
+        # context.bot.send_photo(chat_id=chat_id, photo=open(photo_path, 'rb'))
+        update.message.reply_text(text=open("112.png",'rb'))
 
 
 
@@ -66,5 +67,3 @@ def main():
     updater.start_polling()
     updater.idle()
 
-if __name__ == '__main__':
-    main()
