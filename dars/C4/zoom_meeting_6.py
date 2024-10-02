@@ -5,6 +5,22 @@ for i in range(1,N):
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # def F(x):
 #     z=5
 #     def G(y):
