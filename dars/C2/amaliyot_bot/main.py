@@ -1,1 +1,3 @@
-from python_telegram_bot_5 import
+from menyus import main
+if __name__ == '__main__':
+    main()

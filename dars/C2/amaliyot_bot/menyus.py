@@ -1,4 +1,4 @@
-token="7393833956:AAGJvaWDD5l9i-rsWP8BTHOu8pDrZSz_6KY"
+token="7408760828:AAEKrKsMOHVLIIocJoN3Y8uubfFPAXWsLIo"
 ADMIN_ID=6317196964
 from telegram.ext import Updater,CommandHandler,MessageHandler,Filters
 from telegram import ReplyKeyboardMarkup,KeyboardButton
@@ -27,7 +27,15 @@ def show_menu(update,context):
 def message_func(update,context):
     xabar=update.message.text
     if xabar=='Send Photo':
-        update.message.reply_photo(photo="https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg")
+        update.message.reply_photo(photo=open('112.png','r'))
+        chat_id = update.effective_chat.id
+        # Rasimni joylashgan manzilini bu yerga kiriting, masalan:
+        photo_path = 'path/to/your/image.jpg'
+        # Rasimni yuborish
+        context.bot.send_photo(chat_id=chat_id, photo=open(photo_path, 'rb'))
+
+
+
     elif xabar=="Send Audio":
         update.message.reply_audio(audio="https://muzbass.com/uploads/files/2024-04/Xamdam-Sobirov-Malohat-2_(muzbass_com).mp3")
     else:
@@ -45,7 +53,7 @@ def location_func(update,context):
     print(location.latitude,location.longitude)
 
 def main():
-    updater = Updater(token=token)
+    updater = Updater(token=token,use_context=True)
     dispatcher = updater.dispatcher
     dispatcher.add_handler(CommandHandler('start', start_func))
     dispatcher.add_handler(CommandHandler('menu', show_menu))
