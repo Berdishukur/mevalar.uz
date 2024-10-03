@@ -18,9 +18,39 @@ class Shifokor(Odam):
 
     def outPut(self):
         print(f"Ism : {self.name}\nJinsi : {self.gender}\nYosh : {self.age}\nDori : {self.dori}")
-shifokr1=Shifokor("Alisa",22,"ayol","Parasetamol")
-shifokr1.outPut()
-print(shifokr1.holati)
+# shifokr1=Shifokor("Alisa",22,"ayol","Parasetamol")
+# shifokr1.outPut()
+# print(shifokr1.holati)
+class Jangchi(Odam):
+    def __init__(self,name,age,gender,qurol):
+        super().__init__(name, age, gender)
+        self.qurol=qurol
+
+    def outPut(self):
+        print(f"Ism : {self.name}\nJinsi : {self.gender}\nYosh : {self.age}\nQurol : {self.qurol}")
+
+# jangchi1=Jangchi("Akobir",25,"Erkak","Qalqon")
+# jangchi1.outPut()
+
+# class SuperOdam(Shifokor,Jangchi):
+#     def __init__(self,name,age,gender,dori,qurol):
+#         super().__init__(name, age, gender,dori,qurol)
+#
+#     def outPut1(self):
+#         print(f"Ism : {self.name}\nJinsi : {self.gender}\nYosh : {self.age}\nQurol : {self.qurol}\nDori : {self.dori}")
+#
+# s1=SuperOdam("Sevinch",22,"ayol","As","Qilich")
+# print(s1.holati)
+
+
+
+
+
+
+
+
+
+
 
 
 
