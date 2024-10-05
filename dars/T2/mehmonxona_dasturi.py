@@ -10,6 +10,18 @@ def mehmonlarni_chiqar():
         print("|------------------|-------------------|-------------|")
         print(f"| {kalit}                |  {qiymat[0]}               {qiymat[1]}           ")
     print("|------------------|-------------------|-------------|")
+def mehmon_add():
+    ism = input("Ismini kiriting : ")
+    xona_raqami = int(input("Xona raqamini kiriting (1-10) : "))
+    band_xonalar = list(mehmonlar.keys())
+    while xona_raqami in band_xonalar:
+        print("Bu xona band, qaytadan kiriting")
+        xona_raqami = int(input("Xona raqamini kiriting : "))
+    xona_holati = int(input("      Xona holatini tanlang\nEkonamik ==>> 0.."
+                            "\nStandart ==>> 1..\nLuks ==>> 2.."))
+    mehmonlar[xonalar[xona_raqami - 1]] = [ism, xona_holatlari[xona_holati]]
+    print(f"{ism} mehmonlar ro'yxatiga qo'shildi")
+
 
 while True:
     buyruq=int(input(f"""
@@ -22,7 +34,7 @@ while True:
     if buyruq==1:
         mehmonlarni_chiqar()
     elif buyruq==2:
-        print("Bu buyruq kuchga kirmagan")
+        mehmon_add()
     elif buyruq==3:
         print("Bu buyruq kuchga kirmagan")
     elif buyruq==0:
