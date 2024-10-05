@@ -17,8 +17,7 @@ def mehmon_add():
     while xona_raqami in band_xonalar:
         print("Bu xona band, qaytadan kiriting")
         xona_raqami = int(input("Xona raqamini kiriting : "))
-    xona_holati = int(input("      Xona holatini tanlang\nEkonamik ==>> 0.."
-                            "\nStandart ==>> 1..\nLuks ==>> 2.."))
+    xona_holati = int(input("      Xona holatini tanlang\nEkonamik ==>> 0..\nStandart ==>> 1..\nLuks ==>> 2.."))
     mehmonlar[xonalar[xona_raqami - 1]] = [ism, xona_holatlari[xona_holati]]
     print(f"{ism} mehmonlar ro'yxatiga qo'shildi")
 
