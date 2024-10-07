@@ -1,4 +1,4 @@
-xonlar=[1,2,3,4,5,6,7,8,9,10]
+# xonlar=[1,2,3,4,5,6,7,8,9,10]
 xonlar_holati=("Ekonamik","Standart","Luks")
 mehmonlar={xonlar[1]:["Berdi",xonlar_holati[1]]}
 def mehmonlarni_chiqar():
