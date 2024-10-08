@@ -2,7 +2,6 @@
 xonalar=[1,2,3,4,5,6,7,8,9,10]
 xona_holatlari=("Ekonomik","Standart","Luks")
 mehmonlar={xonalar[0]:["Ali",xona_holatlari[0]],xonalar[3]:["Vali",xona_holatlari[2]]}
-
 def mehmonlarni_chiqar():
     print("|------------------|-------------------|-------------|")
     print(f"| Xona raqami      |   Ismi            |  xona holati|")
@@ -20,7 +19,14 @@ def mehmon_add():
     xona_holati = int(input("      Xona holatini tanlang\nEkonamik ==>> 0.. \nStandart ==>> 1..\nLuks ==>> 2.."))
     mehmonlar[xonalar[xona_raqami - 1]] = [ism, xona_holatlari[xona_holati]]
     print(f"{ism} mehmonlar ro'yxatiga qo'shildi")
-
+def mehmon_del():
+    x_raqam = int(input("Qaysi xonadagi mehmonni chiqarmoqchisiz? "))
+    band_xonalar = mehmonlar.keys()
+    while x_raqam not in band_xonalar:
+        print("Bu xonada mehmon yo'q ")
+        x_raqam = int(input("Qaysi xonadagi mehmonni chiqarmoqchisiz? "))
+    print(f"{mehmonlar[xonalar[x_raqam - 1]][0]} >> Mehmonimiz  chiqarildi")
+    del mehmonlar[xonalar[x_raqam - 1]]
 
 while True:
     buyruq=int(input(f"""
@@ -35,7 +41,7 @@ while True:
     elif buyruq==2:
         mehmon_add()
     elif buyruq==3:
-        print("Bu buyruq kuchga kirmagan")
+        mehmon_del()
     elif buyruq==0:
         print("Dasturdan foydalanganingiz uchun rahmat!!! ")
         break
