@@ -1,4 +1,15 @@
-from sonlar_bilan_ishlash import add,ayirish
+file=open("my_file.txt",'w')
+file.write("Mening bugun birinchi darsim")
 
-add(2,4)
-ayirish(5,1)
+
+
+
+
+
+
+
+
+# from sonlar_bilan_ishlash import add,ayirish
+#
+# add(2,4)
+# ayirish(5,1)
